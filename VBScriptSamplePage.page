@@ -1,0 +1,10 @@
+<apex:page Controller="VBScriptSampleController" title="VBScriptSample" showHeader="true" sidebar="false" tabStyle="Account">
+	<apex:form id="formId">
+	    <apex:commandButton value="Click!!" onclick="btnClick('{!msg}');" rerender="formId" />
+	</apex:form>
+	<script type="text/vbscript">
+		Sub btnClick(prmMsg)
+    		MsgBox prmMsg
+		End Sub
+	</script>
+</apex:page>
