@@ -1,5 +1,5 @@
 /*
- * VBScriptサンプル・コントローラーテストクラス
+ * VBScriptサンプル
  * © 2013 Force.com Developer
  * ----------------------------------------
  * @createdDate      : 2013/01/01
@@ -19,10 +19,10 @@ private class VBScriptSampleControllerTest {
         System.debug('◆◆◆◆VBScriptSampleControllerTest:START');
         
         // ユーザ
-        User objUser = getUser();
+        User user = getUser();
         
         // テスト実施
-        System.RunAs(objUser) {
+        System.RunAs(user) {
             
             // カレントページにパラメータを設定
 	        PageReference pageRef = getPageReference();
@@ -33,7 +33,7 @@ private class VBScriptSampleControllerTest {
             
             // コンストラクタ
             VBScriptSampleController cls = new VBScriptSampleController();
-            System.assertEquals(String.isEmpty(cls.msg), false);
+            System.assertEquals(cls.msg, VBScriptSampleController.SCRIPT_MSG);
             
             // テスト終了
             Test.stopTest();
