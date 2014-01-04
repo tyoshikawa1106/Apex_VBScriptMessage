@@ -1,4 +1,4 @@
-Apex_IsVBScript_Message
+Apex_VBScriptMessage
 =======================
 
 VBScriptのメッセージ表示処理のサンプルコードです。  
